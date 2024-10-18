@@ -4,7 +4,7 @@ import { styles } from "../../styles/styles";
 import Logo from "../../styles/assets/Logo";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="relative">
 
         <button
-          className={styles.buttonStyle + " lg:hidden"}
+          className={styles.buttonStyle + " lg:hidden z-40"}
           onClick={toggleDropdown}
         >
           {isOpen ? "X" : "|||"}
@@ -48,7 +48,7 @@ const Navbar = () => {
 
         {/* Mobile Dropdown Menu */}
         {isOpen && (
-          <ul className="absolute right-0 top-8 bg-white shadow-lg p-4 rounded-lg lg:hidden">
+          <ul className="absolute right-0 top-8 bg-white shadow-lg p-4 rounded-lg lg:hidden -z-10">
             <li>
               <Link to="/" className="block px-4 py-2">Home</Link>
             </li>

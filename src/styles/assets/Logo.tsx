@@ -1,6 +1,6 @@
-interface SvgDimentions {
-    w:string,
-    h:string
+export interface SvgDimentions {
+    w?:string,
+    h?:string
 }
 
 
